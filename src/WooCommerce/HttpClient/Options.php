@@ -145,4 +145,14 @@ class Options
     {
         return isset($this->options['follow_redirects']) ? (bool) $this->options['follow_redirects'] : false;
     }
+    
+    /**
+     * Check if need to ability to use BasicAuth.
+     *
+     * @return bool
+     */
+    public function useBasicAuth()
+    {
+        return isset($this->options['basic_auth']) ? (bool) $this->options['basic_auth'] : true;
+    }
 }
